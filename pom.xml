@@ -11,6 +11,7 @@
 
     <modules>
         <module>00-common-utilities</module>
+        <module>01a-spring-core-resilience-features</module>
     </modules>
 
 </project>

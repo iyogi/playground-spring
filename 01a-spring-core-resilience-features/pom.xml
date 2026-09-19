@@ -1,11 +1,5 @@
-#create new module. replace "99-spring-module" with the actual module name
-MODULE_NAME=01a-spring-core-resilience-features
-
-# create module one level above this script - where all maven modules reside, and change to that directory
-mkdir ../$MODULE_NAME && cd ../$MODULE_NAME || exit
-mkdir -p src/main/java/com/yrs src/main/resources src/test/java/com/yrs src/test/resources
-echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -17,7 +11,7 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
       </parent>
 
     <groupId>com.yrs</groupId>
-    <artifactId>$MODULE_NAME</artifactId>
+    <artifactId>01a-spring-core-resilience-features</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
@@ -34,6 +28,12 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
             <artifactId>00-common-utilities</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -45,4 +45,4 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
       </plugins>
     </build>
 
-</project>" > pom.xml
+</project>
